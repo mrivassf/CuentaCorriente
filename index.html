@@ -1519,7 +1519,7 @@
               <td style="font-size:12px;color:var(--g400)">05/06/2026</td>
               <td>
                 <div style="display:flex;gap:5px">
-                  <button class="btn bo bsm" onclick="go('cc-detalle')">Ver detalle</button>
+                  <button class="btn bo bsm" onclick="verDetalle('Distribuidora El Sol')">Ver detalle</button>
                   <button class="btn bsm"
                     style="background:var(--green-s);color:var(--green);border:1px solid rgba(29,158,117,.2)"
                     onclick="openCobro('Distribuidora El Sol')">+ Cobro</button>
@@ -1547,7 +1547,7 @@
               <td style="font-size:12px;color:var(--g400)">03/06/2026</td>
               <td>
                 <div style="display:flex;gap:5px">
-                  <button class="btn bo bsm" onclick="go('cc-detalle')">Ver detalle</button>
+                  <button class="btn bo bsm" onclick="verDetalle('Heladería Palermo')">Ver detalle</button>
                   <button class="btn bsm"
                     style="background:var(--green-s);color:var(--green);border:1px solid rgba(29,158,117,.2)"
                     onclick="openCobro('Heladería Palermo')">+ Cobro</button>
@@ -1575,7 +1575,7 @@
               <td style="font-size:12px;color:var(--g400)">02/06/2026</td>
               <td>
                 <div style="display:flex;gap:5px">
-                  <button class="btn bo bsm" onclick="go('cc-detalle')">Ver detalle</button>
+                  <button class="btn bo bsm" onclick="verDetalle('Almacén Don Pedro')">Ver detalle</button>
                   <button class="btn bsm"
                     style="background:var(--green-s);color:var(--green);border:1px solid rgba(29,158,117,.2)"
                     onclick="openCobro('Almacén Don Pedro')">+ Cobro</button>
@@ -1603,7 +1603,7 @@
               <td style="font-size:12px;color:var(--g400)">28/05/2026</td>
               <td>
                 <div style="display:flex;gap:5px">
-                  <button class="btn bo bsm" onclick="go('cc-detalle')">Ver detalle</button>
+                  <button class="btn bo bsm" onclick="verDetalle('Kiosco Central')">Ver detalle</button>
                   <button class="btn bsm"
                     style="background:var(--green-s);color:var(--green);border:1px solid rgba(29,158,117,.2)"
                     onclick="openCobro('Kiosco Central')">+ Cobro</button>
@@ -1631,7 +1631,7 @@
               <td style="font-size:12px;color:var(--g400)">04/06/2026</td>
               <td>
                 <div style="display:flex;gap:5px">
-                  <button class="btn bo bsm" onclick="go('cc-detalle')">Ver detalle</button>
+                  <button class="btn bo bsm" onclick="verDetalle('Snacks & Co.')">Ver detalle</button>
                   <button class="btn bsm"
                     style="background:var(--green-s);color:var(--green);border:1px solid rgba(29,158,117,.2)"
                     onclick="openCobro('Snacks & Co.')">+ Cobro</button>
@@ -1659,7 +1659,7 @@
               <td style="font-size:12px;color:var(--g400)">01/05/2026</td>
               <td>
                 <div style="display:flex;gap:5px">
-                  <button class="btn bo bsm" onclick="go('cc-detalle')">Ver detalle</button>
+                  <button class="btn bo bsm" onclick="verDetalle('Supermercado Norte')">Ver detalle</button>
                   <button class="btn bsm"
                     style="background:var(--green-s);color:var(--green);border:1px solid rgba(29,158,117,.2)"
                     onclick="openCobro('Supermercado Norte')">+ Cobro</button>
@@ -1683,21 +1683,21 @@
         <!-- Info del cliente + Badges -->
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
           <div>
-            <strong style="font-size:16px; color:var(--g800);">Distribuidora El Sol</strong>
-            <span style="font-size:12px; color:var(--g400); font-family:monospace; margin-left:8px;">CUIT: 20-12345678-9</span>
+            <strong id="cl-det-name" style="font-size:16px; color:var(--g800);">Distribuidora El Sol</strong>
+            <span id="cl-det-cuit" style="font-size:12px; color:var(--g400); font-family:monospace; margin-left:8px;">CUIT: 20-12345678-9</span>
           </div>
           <!-- Separador vertical sutil -->
           <div style="height:16px; width:1px; background:var(--g200); margin:0 4px;"></div>
           <!-- Badges -->
           <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
             <span class="bdg bdg-p" style="font-size:12px; padding:4px 10px;">
-              Límite de crédito: <strong style="font-family:monospace; margin-left:2px;">$500.000</strong>
+              Límite de crédito: <strong id="cl-det-limite" style="font-family:monospace; margin-left:2px;">$500.000</strong>
             </span>
             <span class="bdg bdg-r" style="font-size:12px; padding:4px 10px; background:var(--red-s); color:var(--red); border:1px solid rgba(226,75,74,.2);">
-              Saldo pendiente: <strong style="font-family:monospace; margin-left:2px;">$230.000</strong>
+              Saldo pendiente: <strong id="cl-det-pendiente" style="font-family:monospace; margin-left:2px;">$230.000</strong>
             </span>
-            <span class="bdg bdg-g" style="font-size:12px; padding:4px 10px; background:var(--green-s); color:var(--green); border:1px solid rgba(29,158,117,.2);">
-              Saldo disponible: <strong style="font-family:monospace; margin-left:2px;">$270.000</strong>
+            <span id="cl-det-disponible-badge" class="bdg bdg-g" style="font-size:12px; padding:4px 10px; background:var(--green-s); color:var(--green); border:1px solid rgba(29,158,117,.2);">
+              Saldo disponible: <strong id="cl-det-disponible" style="font-family:monospace; margin-left:2px;">$270.000</strong>
             </span>
           </div>
         </div>
@@ -1722,19 +1722,18 @@
           </select>
         </div>
         <button class="btn bo">⬇ Exportar</button>
-        <button class="btn bgreen" onclick="openCobro('Distribuidora El Sol')">+ Nueva cobranza</button>
+        <button class="btn bgreen" onclick="openCobro(currentClient)">+ Nueva cobranza</button>
       </div>
 
       <!-- Tabla libro mayor -->
       <div class="card">
         <table>
           <thead>
-            <tr>
+            <tr id="lm-thead-tr">
               <th>Fecha</th>
               <th>Concepto / Documento</th>
-              <th style="text-align:right">Debe (Importe)</th>
-              <th style="text-align:right">Haber (Pago)</th>
-              <th style="text-align:right">Saldo Acumulado</th>
+              <th style="text-align:right">Salida</th>
+              <th style="text-align:right">Entrada</th>
               <th style="width:36px"></th>
             </tr>
           </thead>
@@ -1756,7 +1755,7 @@
       </div>
 
       <!-- FAB flotante -->
-      <button class="fab" onclick="openCobro('Distribuidora El Sol')" title="Nueva cobranza">+</button>
+      <button class="fab" onclick="openCobro(currentClient)" title="Nueva cobranza">+</button>
       <div class="fab-label">Nueva cobranza</div>
     </div>
 
@@ -2165,17 +2164,99 @@
     });
 
     // ── DINAMISMO LIBRO MAYOR & SALDO INICIAL PRECALCULADO ────────────
-    const MOVIMIENTOS = [
-      { fecha: '2026-05-20', tipo: 'ANULADO', concepto: 'Anulación — Recibo #REC-2026-0088', cargo: 0, pago: 50000, doc: 'REC-2026-0088', anulado: true },
-      { fecha: '2026-05-22', tipo: 'RECIBO', concepto: 'Cobro — Cheque N° 0041823 (Banco Nación)', cargo: 0, pago: 200000, doc: 'REC-2026-0009' },
-      { fecha: '2026-05-26', tipo: 'FACTURA', concepto: 'Factura — Pedido #POS-1058', cargo: 95800, pago: 0, doc: 'FA-2026-0440' },
-      { fecha: '2026-05-28', tipo: 'NC', concepto: 'Nota de Crédito — Devolución #POS-1071', cargo: 0, pago: 50600, doc: 'NC-2026-0012' },
-      // { fecha: '2026-06-01', tipo: 'FACTURA', concepto: 'Factura agrupada (3 remitos)', cargo: 259600, pago: 0, doc: 'FA-2026-0441' },
-      { fecha: '2026-06-03', tipo: 'RECIBO', concepto: 'Cobro — Transferencia ref. 0034781', cargo: 0, pago: 120000, doc: 'REC-2026-0010' },
-      { fecha: '2026-06-05', tipo: 'FACTURA', concepto: 'Factura — Pedido #POS-1089', cargo: 45200, pago: 0, doc: 'FA-2026-0442' }
-    ];
+    const CLIENTES_DATA = {
+      'Distribuidora El Sol': {
+        cuit: '20-12345678-9',
+        limite: 500000,
+        pendiente: 230000,
+        disponible: 270000,
+        baseSaldoInicial: 200000,
+        movimientos: [
+          { fecha: '2026-05-20', tipo: 'ANULADO', concepto: 'Anulación — Recibo #REC-2026-0088', cargo: 0, pago: 50000, doc: 'REC-2026-0088', anulado: true },
+          { fecha: '2026-05-22', tipo: 'RECIBO', concepto: 'Cobro — Cheque N° 0041823 (Banco Nación)', cargo: 0, pago: 200000, doc: 'REC-2026-0009' },
+          { fecha: '2026-05-26', tipo: 'FACTURA', concepto: 'Factura — Pedido #POS-1058', cargo: 95800, pago: 0, doc: 'FA-2026-0440' },
+          { fecha: '2026-05-28', tipo: 'NC', concepto: 'Nota de Crédito — Devolución #POS-1071', cargo: 0, pago: 50600, doc: 'NC-2026-0012' },
+          { fecha: '2026-06-03', tipo: 'RECIBO', concepto: 'Cobro — Transferencia ref. 0034781', cargo: 0, pago: 120000, doc: 'REC-2026-0010' },
+          { fecha: '2026-06-05', tipo: 'FACTURA', concepto: 'Factura — Pedido #POS-1089', cargo: 45200, pago: 0, doc: 'FA-2026-0442' }
+        ]
+      },
+      'Heladería Palermo': {
+        cuit: '27-28901234-5',
+        limite: 300000,
+        pendiente: 185000,
+        disponible: 115000,
+        baseSaldoInicial: 100000,
+        movimientos: [
+          { fecha: '2026-05-22', tipo: 'FACTURA', concepto: 'Factura — Pedido #POS-1022', cargo: 150000, pago: 0, doc: 'FA-2026-0410' },
+          { fecha: '2026-05-28', tipo: 'RECIBO', concepto: 'Cobro — Transferencia ref. 88301', cargo: 0, pago: 65000, doc: 'REC-2026-0005' }
+        ]
+      },
+      'Almacén Don Pedro': {
+        cuit: '20-55443322-1',
+        limite: 150000,
+        pendiente: 148500,
+        disponible: 1500,
+        baseSaldoInicial: 148500,
+        movimientos: []
+      },
+      'Kiosco Central': {
+        cuit: '27-87654321-5',
+        limite: 150000,
+        pendiente: 0,
+        disponible: 150000,
+        baseSaldoInicial: 0,
+        movimientos: []
+      },
+      'Snacks & Co.': {
+        cuit: '30-99887766-2',
+        limite: 200000,
+        pendiente: 92400,
+        disponible: 107600,
+        baseSaldoInicial: 92400,
+        movimientos: []
+      },
+      'Supermercado Norte': {
+        cuit: '30-11223344-8',
+        limite: 600000,
+        pendiente: 592400,
+        disponible: -92400,
+        baseSaldoInicial: 592400,
+        movimientos: []
+      }
+    };
 
-    const BASE_SALDO_INICIAL = 200000;
+    let currentClient = 'Distribuidora El Sol';
+
+    function verDetalle(nombre) {
+      currentClient = nombre;
+      const client = CLIENTES_DATA[nombre] || CLIENTES_DATA['Distribuidora El Sol'];
+      
+      document.getElementById('cl-det-name').textContent = nombre;
+      document.getElementById('cl-det-cuit').textContent = 'CUIT: ' + client.cuit;
+      document.getElementById('cl-det-limite').textContent = '$' + client.limite.toLocaleString('es-AR');
+      document.getElementById('cl-det-pendiente').textContent = '$' + client.pendiente.toLocaleString('es-AR');
+      
+      const disponibleEl = document.getElementById('cl-det-disponible');
+      disponibleEl.textContent = '$' + client.disponible.toLocaleString('es-AR');
+      
+      const badgeDisp = document.getElementById('cl-det-disponible-badge');
+      if (client.disponible < 0) {
+        badgeDisp.style.background = 'var(--red-s)';
+        badgeDisp.style.color = 'var(--red)';
+        badgeDisp.style.borderColor = 'rgba(226,75,74,.2)';
+      } else if (client.disponible < 5000) {
+        badgeDisp.style.background = 'var(--amber-s)';
+        badgeDisp.style.color = 'var(--amber)';
+        badgeDisp.style.borderColor = 'rgba(186,117,23,.2)';
+      } else {
+        badgeDisp.style.background = 'var(--green-s)';
+        badgeDisp.style.color = 'var(--green)';
+        badgeDisp.style.borderColor = 'rgba(29,158,117,.2)';
+      }
+      
+      renderLibroMayor();
+      go('cc-detalle');
+    }
 
     function renderLibroMayor() {
       const desdeVal = document.getElementById('filter-desde').value;
@@ -2185,9 +2266,36 @@
       const tbody = document.getElementById('lm-tbody');
       if (!tbody) return;
 
+      const client = CLIENTES_DATA[currentClient] || CLIENTES_DATA['Distribuidora El Sol'];
+      const movimientos = client.movimientos;
+      const baseSaldoInicial = client.baseSaldoInicial;
+      
+      const isPalermo = currentClient === 'Heladería Palermo';
+      
+      // Actualizar encabezados de la tabla
+      const theadTr = document.getElementById('lm-thead-tr');
+      if (theadTr) {
+        if (isPalermo) {
+          theadTr.innerHTML = `
+            <th>Fecha</th>
+            <th>Concepto / Documento</th>
+            <th style="text-align:right">Importe</th>
+            <th style="width:36px"></th>
+          `;
+        } else {
+          theadTr.innerHTML = `
+            <th>Fecha</th>
+            <th>Concepto / Documento</th>
+            <th style="text-align:right">Salida</th>
+            <th style="text-align:right">Entrada</th>
+            <th style="width:36px"></th>
+          `;
+        }
+      }
+
       // 1. Calcular Saldo Inicial (anterior a la fecha de inicio)
-      let saldoAcumulado = BASE_SALDO_INICIAL;
-      const movsAnteriores = MOVIMIENTOS.filter(m => {
+      let saldoAcumulado = baseSaldoInicial;
+      const movsAnteriores = movimientos.filter(m => {
         if (m.anulado) return false;
         return m.fecha < desdeVal;
       });
@@ -2199,8 +2307,8 @@
       let html = '';
 
       // Calcular Saldo Actual Total del Cliente (usado en el saldo posterior de cierre)
-      let currentTotal = BASE_SALDO_INICIAL;
-      MOVIMIENTOS.forEach(m => {
+      let currentTotal = baseSaldoInicial;
+      movimientos.forEach(m => {
         if (!m.anulado) currentTotal += m.cargo - m.pago;
       });
 
@@ -2215,25 +2323,55 @@
         const prevYear = dateObj.getFullYear();
         const prevDateStr = `${prevDay}/${prevMonth}/${prevYear}`;
 
-        html += `
-      <tr style="background:var(--g50); font-weight:600;">
-        <td style="font-size:12px;color:var(--g600);white-space:nowrap">${prevDateStr}</td>
-        <td>
-          <span style="color:var(--g800)">Saldo anterior al inicio del período</span>
-        </td>
-        <td style="text-align:right;color:var(--g200)">—</td>
-        <td style="text-align:right;color:var(--g200)">—</td>
-        <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:${saldoAcumulado <= 0 ? 'var(--green)' : 'var(--red)'}">
-          $${saldoAcumulado.toLocaleString('es-AR')}
-        </td>
-        <td></td>
-      </tr>
-    `;
+        if (isPalermo) {
+          html += `
+            <tr style="background:var(--g50); font-weight:600;">
+              <td style="font-size:12px;color:var(--g600);white-space:nowrap">${prevDateStr}</td>
+              <td>
+                <span style="color:var(--g800)">Saldo anterior</span>
+              </td>
+              <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:${saldoAcumulado <= 0 ? 'var(--green)' : 'var(--red)'}">
+                $${saldoAcumulado.toLocaleString('es-AR')}
+              </td>
+              <td></td>
+            </tr>
+          `;
+        } else {
+          if (saldoAcumulado >= 0) {
+            html += `
+              <tr style="background:var(--g50); font-weight:600;">
+                <td style="font-size:12px;color:var(--g600);white-space:nowrap">${prevDateStr}</td>
+                <td>
+                  <span style="color:var(--g800)">Saldo anterior</span>
+                </td>
+                <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:var(--red)">
+                  $${saldoAcumulado.toLocaleString('es-AR')}
+                </td>
+                <td style="text-align:right;color:var(--g200)">—</td>
+                <td></td>
+              </tr>
+            `;
+          } else {
+            html += `
+              <tr style="background:var(--g50); font-weight:600;">
+                <td style="font-size:12px;color:var(--g600);white-space:nowrap">${prevDateStr}</td>
+                <td>
+                  <span style="color:var(--g800)">Saldo anterior</span>
+                </td>
+                <td style="text-align:right;color:var(--g200)">—</td>
+                <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:var(--green)">
+                  $${Math.abs(saldoAcumulado).toLocaleString('es-AR')}
+                </td>
+                <td></td>
+              </tr>
+            `;
+          }
+        }
       }
 
       // 2. Procesar movimientos acumulando saldo línea por línea
-      let runningSaldo = BASE_SALDO_INICIAL;
-      const processedMovs = MOVIMIENTOS.map(m => {
+      let runningSaldo = baseSaldoInicial;
+      const processedMovs = movimientos.map(m => {
         if (!m.anulado) {
           runningSaldo += m.cargo - m.pago;
         }
@@ -2260,8 +2398,26 @@
         return a.fecha.localeCompare(b.fecha);
       });
 
+      // Calcular totales por columna para la vista estándar
+      let totalSalida = 0;
+      let totalEntrada = 0;
+      if (desdeVal) {
+        if (saldoAcumulado >= 0) {
+          totalSalida += saldoAcumulado;
+        } else {
+          totalEntrada += Math.abs(saldoAcumulado);
+        }
+      }
+      visibleMovs.forEach(m => {
+        if (!m.anulado) {
+          totalSalida += m.cargo;
+          totalEntrada += m.pago;
+        }
+      });
+
       if (visibleMovs.length === 0) {
-        html += `<tr><td colspan="6" style="text-align:center;color:var(--g400);padding:20px">No hay movimientos en este período</td></tr>`;
+        const colspanVal = isPalermo ? 4 : 5;
+        html += `<tr><td colspan="${colspanVal}" style="text-align:center;color:var(--g400);padding:20px">No hay movimientos en este período</td></tr>`;
       } else {
         visibleMovs.forEach(m => {
           const parts = m.fecha.split('-');
@@ -2275,24 +2431,18 @@
 
           const typeLabel = m.anulado ? 'ANULADO' : m.tipo;
 
-          const debeText = m.cargo > 0 ? `<span class="lm-debit">$${m.cargo.toLocaleString('es-AR')}</span>` : '<span style="color:var(--g200)">—</span>';
-          const haberText = m.pago > 0 ? `<span class="lm-credit">$${m.pago.toLocaleString('es-AR')}</span>` : '<span style="color:var(--g200)">—</span>';
-
-          const isSaldoZero = m.saldoDespues <= 0;
-          const saldoColor = isSaldoZero ? 'var(--green)' : 'var(--red)';
-
           let menuHtml = '';
           if (m.tipo === 'RECIBO' && !m.anulado) {
             menuHtml = `
-          <div class="mw"><button class="db" onclick="openMenu(this)" style="font-size:16px">⋮</button>
-            <div class="dd">
-              <div class="ddi dan" onclick="anularCobroMock('${m.doc}')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
-                Anular cobro
+              <div class="mw"><button class="db" onclick="openMenu(this)" style="font-size:16px">⋮</button>
+                <div class="dd">
+                  <div class="ddi dan" onclick="anularCobroMock('${m.doc}')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+                    Anular cobro
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        `;
+            `;
           }
 
           let compLinkHtml = '';
@@ -2302,24 +2452,50 @@
             compLinkHtml = `<span class="lm-comp-link" onclick="alert('Preview PDF: Nota de Crédito ${m.doc}')">${m.doc} ↗</span>`;
           }
 
-          html += `
-        <tr style="${m.anulado ? 'opacity:.55' : ''}">
-          <td style="font-size:12px;color:var(--g400);white-space:nowrap">${formattedDate}</td>
-          <td>
-            <div class="lm-comp">
-              <span style="${m.anulado ? 'text-decoration:line-through;color:var(--g400)' : ''}">${m.concepto}</span>
-              ${m.anulado ? '<b style="color:var(--red);font-size:11px;margin-left:4px">(ANULADO)</b>' : ''}
-              ${compLinkHtml}
-            </div>
-          </td>
-          <td style="text-align:right">${debeText}</td>
-          <td style="text-align:right">${haberText}</td>
-          <td style="text-align:right; font-weight:700; font-family:monospace; font-size:12px; color:${saldoColor}">
-            $${m.saldoDespues.toLocaleString('es-AR')}
-          </td>
-          <td>${menuHtml}</td>
-        </tr>
-      `;
+          if (isPalermo) {
+            let importeText = '';
+            if (m.cargo > 0) {
+              importeText = `<span class="lm-debit">$${m.cargo.toLocaleString('es-AR')}</span>`;
+            } else if (m.pago > 0) {
+              importeText = `<span class="lm-credit">$${m.pago.toLocaleString('es-AR')}</span>`;
+            } else {
+              importeText = `<span style="color:var(--g200)">—</span>`;
+            }
+
+            html += `
+              <tr style="${m.anulado ? 'opacity:.55' : ''}">
+                <td style="font-size:12px;color:var(--g400);white-space:nowrap">${formattedDate}</td>
+                <td>
+                  <div class="lm-comp">
+                    <span style="${m.anulado ? 'text-decoration:line-through;color:var(--g400)' : ''}">${m.concepto}</span>
+                    ${m.anulado ? '<b style="color:var(--red);font-size:11px;margin-left:4px">(ANULADO)</b>' : ''}
+                    ${compLinkHtml}
+                  </div>
+                </td>
+                <td style="text-align:right">${importeText}</td>
+                <td>${menuHtml}</td>
+              </tr>
+            `;
+          } else {
+            const debeText = m.cargo > 0 ? `<span class="lm-debit">$${m.cargo.toLocaleString('es-AR')}</span>` : '<span style="color:var(--g200)">—</span>';
+            const haberText = m.pago > 0 ? `<span class="lm-credit">$${m.pago.toLocaleString('es-AR')}</span>` : '<span style="color:var(--g200)">—</span>';
+
+            html += `
+              <tr style="${m.anulado ? 'opacity:.55' : ''}">
+                <td style="font-size:12px;color:var(--g400);white-space:nowrap">${formattedDate}</td>
+                <td>
+                  <div class="lm-comp">
+                    <span style="${m.anulado ? 'text-decoration:line-through;color:var(--g400)' : ''}">${m.concepto}</span>
+                    ${m.anulado ? '<b style="color:var(--red);font-size:11px;margin-left:4px">(ANULADO)</b>' : ''}
+                    ${compLinkHtml}
+                  </div>
+                </td>
+                <td style="text-align:right">${debeText}</td>
+                <td style="text-align:right">${haberText}</td>
+                <td>${menuHtml}</td>
+              </tr>
+            `;
+          }
         });
       }
 
@@ -2333,20 +2509,36 @@
           const year = parts[0];
           const dateStr = `${day} de ${meses[monthIndex]} de ${year}`;
 
-          html += `
-        <tr style="background:var(--g50); font-weight:600;">
-          <td style="font-size:12px;color:var(--g600);white-space:nowrap">—</td>
-          <td>
-            <span style="color:var(--g800)">Saldo posterior al ${dateStr} (saldo real actual)</span>
-          </td>
-          <td style="text-align:right;color:var(--g200)">—</td>
-          <td style="text-align:right;color:var(--g200)">—</td>
-          <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:${currentTotal <= 0 ? 'var(--green)' : 'var(--red)'}">
-            $${currentTotal.toLocaleString('es-AR')}
-          </td>
-          <td></td>
-        </tr>
-      `;
+          if (isPalermo) {
+            html += `
+              <tr style="background:var(--g50); font-weight:600;">
+                <td style="font-size:12px;color:var(--g600);white-space:nowrap">—</td>
+                <td>
+                  <span style="color:var(--g800)">Saldo del período</span>
+                </td>
+                <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:${currentTotal <= 0 ? 'var(--green)' : 'var(--red)'}">
+                  $${currentTotal.toLocaleString('es-AR')}
+                </td>
+                <td></td>
+              </tr>
+            `;
+          } else {
+            html += `
+              <tr style="background:var(--g50); font-weight:600;">
+                <td style="font-size:12px;color:var(--g600);white-space:nowrap">—</td>
+                <td>
+                  <span style="color:var(--g800)">Saldo del período</span>
+                </td>
+                <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:var(--red)">
+                  $${totalSalida.toLocaleString('es-AR')}
+                </td>
+                <td style="text-align:right;font-weight:700;font-family:monospace;font-size:12px;color:var(--green)">
+                  $${totalEntrada.toLocaleString('es-AR')}
+                </td>
+                <td></td>
+              </tr>
+            `;
+          }
         }
       }
 
@@ -2354,10 +2546,31 @@
     }
 
     function anularCobroMock(doc) {
-      const mov = MOVIMIENTOS.find(m => m.doc === doc);
+      const client = CLIENTES_DATA[currentClient];
+      if (!client) return;
+      const mov = client.movimientos.find(m => m.doc === doc);
       if (mov) {
         if (confirm(`¿Desea anular el recibo ${doc}?`)) {
           mov.anulado = true;
+          client.pendiente += mov.pago;
+          client.disponible -= mov.pago;
+          
+          document.getElementById('cl-det-pendiente').textContent = '$' + client.pendiente.toLocaleString('es-AR');
+          
+          const disponibleEl = document.getElementById('cl-det-disponible');
+          disponibleEl.textContent = '$' + client.disponible.toLocaleString('es-AR');
+          
+          const badgeDisp = document.getElementById('cl-det-disponible-badge');
+          if (client.disponible < 0) {
+            badgeDisp.style.background = 'var(--red-s)';
+            badgeDisp.style.color = 'var(--red)';
+            badgeDisp.style.borderColor = 'rgba(226,75,74,.2)';
+          } else {
+            badgeDisp.style.background = 'var(--green-s)';
+            badgeDisp.style.color = 'var(--green)';
+            badgeDisp.style.borderColor = 'rgba(29,158,117,.2)';
+          }
+
           renderLibroMayor();
           alert('Recibo anulado y saldo de cuenta corriente actualizado.');
         }
