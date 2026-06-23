@@ -1432,7 +1432,7 @@
       <div class="kpi-row" style="grid-template-columns: repeat(3, 1fr);">
         <div class="kpi">
           <div class="kpi-lbl">Total en cuenta corriente</div>
-          <div class="kpi-val">$2.600.000</div>
+          <div class="kpi-val">$2.168.300</div>
           <div class="kpi-sub">Total consignado en CC</div>
         </div>
         <div class="kpi red">
@@ -1882,8 +1882,8 @@
     <!-- ══════════════════════════════════════════════════════════════════
      PANEL LATERAL: REGISTRAR COBRO
 ════════════════════════════════════════════════════════════════════ -->
-    <div class="panel-overlay" id="panel-cobro" onclick="closePanelOutside(event)">
-      <div class="panel">
+    <div class="mo-overlay" id="panel-cobro" onclick="closePanelOutside(event)">
+      <div style="background:#fff; border-radius:var(--rl); width:520px; max-height:90vh; box-shadow:0 8px 40px rgba(15,0,53,.22); animation:moIn .16s ease; display:flex; flex-direction:column; overflow:hidden;">
         <div class="panel-hdr">
           <div>
             <div class="panel-title">Registrar Cobro</div>
@@ -2058,7 +2058,6 @@
           <select onchange="onPayMethodChange(this)" class="pay-method-select">
             <option>Efectivo</option>
             <option>Transferencia bancaria</option>
-            <option>Cheque</option>
             <option>Tarjeta de débito</option>
             <option>Tarjeta de crédito</option>
             <option>Mercado Pago</option>
@@ -2075,8 +2074,8 @@
     </div>
     <div class="pay-ref-container fld" style="display:none; margin-top:4px;">
       <div class="fld-wrap">
-        <label>Referencia / N° cheque</label>
-        <input type="text" placeholder="N° transferencia, cheque…" class="pay-ref-input"/>
+        <label>Referencia</label>
+        <input type="text" placeholder="N° transferencia o comprobante…" class="pay-ref-input"/>
       </div>
     </div>
   `;
